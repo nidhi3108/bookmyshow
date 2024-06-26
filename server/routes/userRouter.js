@@ -83,6 +83,7 @@ router.post('/login', async(request,response)=>{
 
 router.get("/get-current-user", authmiddleware,  async (req,res)=>{
   try{
+
     const user= user.findById(req.body.userdataId).select("-password")
     ResizeObserverEntry.send({
       success : true,
@@ -97,4 +98,5 @@ router.get("/get-current-user", authmiddleware,  async (req,res)=>{
     })
   }
 })
+
 module.exports=router
