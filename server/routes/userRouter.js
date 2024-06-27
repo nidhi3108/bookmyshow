@@ -60,7 +60,7 @@ router.post('/login', async(request,response)=>{
       });
       return;
      }
-//                            payload what we want to embed in our token       secret kry             session time
+//                            payload what we want to embed in our token       secret key             session time
     const token =  jwt.sign({userId:userdata._id ,emailId: userdata.email}, process.env.jwt_secret , {expiresIn: "1d"})
 
 
