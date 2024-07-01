@@ -1,0 +1,30 @@
+.loader-parent{
+    position: fixed;
+    background-color: black;
+    inset: 0;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+}
+
+.loader{
+    height: 30px;
+    width: 30px;
+    border: 4px solid black;
+    border-top-color:brown;
+    border-radius: 50%;
+    animation: loader-anim is linear infinite;
+}
+
+@keyframes loader-anim {
+    0%{
+        transform: rotate(0deg);
+
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
