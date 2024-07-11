@@ -1,5 +1,4 @@
 const express = require("express")
-// const dotenv=require('dotenv')
 const app= express();
 const cors= require("cors")
 const port = process.env.port || 8080;
@@ -15,5 +14,3 @@ app.use("/user", userRouter);
 app.listen(port,()=>{
     console.log(`server is running at ${port}`)
 })
-
-// module.exports = app;

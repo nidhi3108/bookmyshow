@@ -41,6 +41,7 @@ router.post("/register", async (request, response) => {
   }
 });
 
+
 router.post('/login', async(request,response)=>{
   try{
     const userdata= await user.findOne({email: request.body.email})
@@ -97,4 +98,6 @@ router.get("/get-current-user", authmiddleware,  async (req,res)=>{
     })
   }
 })
+
+
 module.exports=router
